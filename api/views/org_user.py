@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from api.models import OrgUser
 
 class OrgUserView(APIView):
-    permission_classes = (IsAuthenticated,) 
+    permission_classes = (IsAuthenticated,)
 
     def get(self, request, format=None):
         orgUser = OrgUser.objects.filter(system_user_id=request.user.id)

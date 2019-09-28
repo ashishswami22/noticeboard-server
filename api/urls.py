@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from rest_framework.authtoken.views import obtain_auth_token
-from api.views.auth import LogoutView
+from api.views.auth import LogoutView, SessionView
 from api.views.org_user import OrgUserView
 
 urlpatterns = [
     path('api/login', obtain_auth_token),
+    path('api/session-info', SessionView.as_view()),
     path('api/logout', LogoutView.as_view()),
     path('api/orgusers', OrgUserView.as_view()),
     path('admin/', admin.site.urls),
