@@ -25,7 +25,7 @@ SECRET_KEY = 'sk#03-rmufdr^9u0wkwp*x9ap6_uz^6fb+b%#x9*c9x&q_xds2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','noticeboard-server.herokuapp.com']
 
 
 # Application definition
