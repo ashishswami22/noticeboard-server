@@ -7,7 +7,7 @@ class OrgUserView(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, format=None):
-        orgUser = OrgUser.objects.filter(system_user_id=request.user.id)
+        orgUser = OrgUser.objects.filter(systemUser_id=request.user.id)
         if not orgUser.exists():
             return Response([])
         return Response(OrgUser.objects.filter(org_id=orgUser.org_id))

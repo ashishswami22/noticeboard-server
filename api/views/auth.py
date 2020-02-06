@@ -13,4 +13,4 @@ class SessionView(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, format=None):
-        return Response(request.user)
+        return Response(request.user.username)
